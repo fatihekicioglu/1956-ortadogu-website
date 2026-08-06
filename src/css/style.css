@@ -243,12 +243,15 @@ h3, h4 { font-family: "Poppins", var(--font-main); font-weight: 700; }
 /* Hero */
 .hero {
   position: relative;
-  padding: 100px 0 108px;
+  padding: 110px 0 118px;
   text-align: center;
   overflow: hidden;
   background:
-    radial-gradient(circle at 25% 15%, rgba(208, 20, 31, 0.55), transparent 55%),
-    linear-gradient(160deg, #2a0406 0%, #170505 55%, #0b0808 100%);
+    radial-gradient(circle at 25% 15%, rgba(208, 20, 31, 0.5), transparent 55%),
+    linear-gradient(160deg, rgba(42, 4, 6, 0.92) 0%, rgba(23, 5, 5, 0.9) 55%, rgba(11, 8, 8, 0.94) 100%),
+    url("/images/hero-bg.jpg");
+  background-size: cover, cover, cover;
+  background-position: center, center, center 30%;
 }
 
 .hero-stripes {
