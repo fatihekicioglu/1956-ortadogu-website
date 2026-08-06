@@ -255,19 +255,21 @@ h3, h4 { font-family: "Poppins", var(--font-main); font-weight: 700; }
   z-index: 0;
   background-size: cover;
   background-position: center 30%;
-  opacity: 0;
-  animation: heroCrossfade 16s ease-in-out infinite;
+}
+
+.hero-photo-1 {
+  opacity: 1;
 }
 
 .hero-photo-2 {
-  animation-delay: 8s;
+  opacity: 0;
+  animation: heroCrossfade 16s ease-in-out infinite;
+  animation-delay: 2s;
 }
 
 @keyframes heroCrossfade {
-  0% { opacity: 0; }
-  8% { opacity: 1; }
-  42% { opacity: 1; }
-  50% { opacity: 0; }
+  0%, 40% { opacity: 0; }
+  50%, 90% { opacity: 1; }
   100% { opacity: 0; }
 }
 
