@@ -1,0 +1,106 @@
+---
+layout: base.njk
+title: Ana Sayfa
+description: "1956 Orta Doğu Hocam Spor Kulübü — Futbol, satranç ve flag futbol branşlarında mücadele eden, ilk sezonunda TFF Ankara 2. Amatör Lig şampiyonu olan ODTÜ kökenli spor kulübü."
+---
+<section class="hero">
+  <div class="hero-stripes" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <img src="/images/logo.jpg" alt="1956 Orta Doğu Spor Kulübü logosu" class="hero-logo">
+    <p class="eyebrow">İlk Sezonda Şampiyon</p>
+    <h1>1956 ORTA DOĞU<br>SPOR KULÜBÜ</h1>
+    <p class="hero-sub">Futbol, satranç ve flag futbolda mücadele eden; sahanın dışında güçlü bir dayanışma ağı kuran bir spor kulübü.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary btn-large" href="https://docs.google.com/forms/d/e/1FAIpQLScwIlz-WRorQes2rpuac4Enek8_z54BN7Ht3b8NfmVzTAdawQ/viewform" target="_blank" rel="noopener">Kulübe Katıl</a>
+      <a class="btn btn-ghost btn-large" href="/haberler/">Haberleri Gör</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-number">2026</span>
+        <span class="stat-label">Kuruluş Yılı</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">Şampiyon</span>
+        <span class="stat-label">İlk Sezon Başarısı</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">3</span>
+        <span class="stat-label">Aktif Şube</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">12/14</span>
+        <span class="stat-label">Sezon Galibiyeti</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <p class="eyebrow eyebrow-center">Gündem</p>
+    <h2 class="section-title">Son Haberler</h2>
+    <div class="card-grid">
+      {% for haber in collections.haberler | limit(3) %}
+      <a class="news-card" href="{{ haber.url }}">
+        {% if haber.data.image %}<img src="{{ haber.data.image }}" alt="" class="news-card-img">{% endif %}
+        <span class="news-tag">{{ haber.data.kategori or "Kulüp" }}</span>
+        <h3>{{ haber.data.title }}</h3>
+        <span class="news-link">{{ haber.date | trDate }} →</span>
+      </a>
+      {% else %}
+      <p class="section-lead">Henüz haber eklenmedi.</p>
+      {% endfor %}
+    </div>
+    <div class="section-cta">
+      <a class="btn btn-ghost" href="/haberler/">Tüm Haberleri Gör</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <p class="eyebrow eyebrow-center">Bünyemizdeki Branşlar</p>
+    <h2 class="section-title">Şubeler</h2>
+    <div class="carousel">
+      <button class="carousel-btn carousel-prev" aria-label="Önceki" data-target="branchTrack">‹</button>
+      <div class="carousel-track" id="branchTrack">
+        <div class="branch-card">
+          <span class="branch-tag">Ana Branş</span>
+          <h3>Futbol</h3>
+          <p>"Balgat 1956 Spor" adıyla TFF Ankara 2. Amatör Lig'de 14 maçta 12 galibiyetle ilk sezonunda şampiyon oldu.</p>
+        </div>
+        <div class="branch-card">
+          <span class="branch-tag">Şube</span>
+          <h3>Satranç</h3>
+          <p>Sahanın dışında, taktik masasında mücadele eden kulübümüzün üç ana branşından biri.</p>
+        </div>
+        <div class="branch-card">
+          <span class="branch-tag">Şube</span>
+          <h3>Flag Futbol</h3>
+          <p>1956 Orta Doğu Flag Futbol Okulu çatısı altında büyüyen, Ankara'nın ilk ve tek flag futbol okulu olma hedefindeki şubemiz.</p>
+        </div>
+      </div>
+      <button class="carousel-btn carousel-next" aria-label="Sonraki" data-target="branchTrack">›</button>
+    </div>
+    <div class="section-cta">
+      <a class="btn btn-ghost" href="/subeler/">Şubeler Hakkında Detaylı Bilgi</a>
+    </div>
+  </div>
+</section>
+
+<section class="join-band">
+  <div class="container join-inner">
+    <h2>Kulübe Katıl</h2>
+    <p>Sen de 1956 Orta Doğu HSK ailesinin bir parçası olmak istiyorsan, kayıt formunu doldurman yeterli.</p>
+    <a class="btn btn-light btn-large"
+       href="https://docs.google.com/forms/d/e/1FAIpQLScwIlz-WRorQes2rpuac4Enek8_z54BN7Ht3b8NfmVzTAdawQ/viewform"
+       target="_blank" rel="noopener">
+      Kayıt Formunu Doldur
+    </a>
+  </div>
+</section>

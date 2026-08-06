@@ -1,0 +1,29 @@
+---
+layout: base.njk
+title: Haberler
+description: "1956 Orta Doğu HSK'den güncel haberler ve duyurular."
+---
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Gündem</p>
+    <h1>Haberler</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="card-grid">
+      {% for haber in collections.haberler %}
+      <a class="news-card" href="{{ haber.url }}">
+        {% if haber.data.image %}<img src="{{ haber.data.image }}" alt="" class="news-card-img">{% endif %}
+        <span class="news-tag">{{ haber.data.kategori or "Kulüp" }}</span>
+        <h3>{{ haber.data.title }}</h3>
+        <p class="news-excerpt">{{ haber.data.excerpt }}</p>
+        <span class="news-link">{{ haber.date | trDate }} →</span>
+      </a>
+      {% else %}
+      <p class="section-lead">Henüz haber eklenmedi. Yakında burada olacak.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,14 @@
+---
+layout: base.njk
+---
+<article class="section haber-detail">
+  <div class="container narrow">
+    <p class="eyebrow"><a href="/haberler/">← Tüm Haberler</a></p>
+    <h1>{{ title }}</h1>
+    <p class="haber-meta">{{ date | trDate }}{% if kategori %} · {{ kategori }}{% endif %}</p>
+    {% if image %}<img src="{{ image }}" alt="" class="haber-detail-img">{% endif %}
+    <div class="haber-body">
+      {{ content | safe }}
+    </div>
+  </div>
+</article>
