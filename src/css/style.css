@@ -247,8 +247,8 @@ h3, h4 { font-family: "Poppins", var(--font-main); font-weight: 700; }
   text-align: center;
   overflow: hidden;
   background:
-    radial-gradient(circle at 25% 15%, rgba(208, 20, 31, 0.5), transparent 55%),
-    linear-gradient(160deg, rgba(42, 4, 6, 0.92) 0%, rgba(23, 5, 5, 0.9) 55%, rgba(11, 8, 8, 0.94) 100%),
+    radial-gradient(circle at 25% 15%, rgba(208, 20, 31, 0.35), transparent 55%),
+    linear-gradient(160deg, rgba(30, 4, 6, 0.68) 0%, rgba(18, 5, 5, 0.6) 55%, rgba(9, 7, 7, 0.78) 100%),
     url("/images/hero-bg.jpg");
   background-size: cover, cover, cover;
   background-position: center, center, center 30%;
@@ -296,6 +296,7 @@ h3, h4 { font-family: "Poppins", var(--font-main); font-weight: 700; }
   letter-spacing: 0.3px;
   color: #fff;
   font-weight: 800;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.55);
 }
 
 .hero h1 .accent {
@@ -303,10 +304,11 @@ h3, h4 { font-family: "Poppins", var(--font-main); font-weight: 700; }
 }
 
 .hero-sub {
-  color: #dcc9c9;
+  color: #f1e4e4;
   font-size: 1.15rem;
   max-width: 560px;
   margin: 0 auto 36px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
 }
 
 .hero-actions {
