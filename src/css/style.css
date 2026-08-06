@@ -991,6 +991,107 @@ h3, h4 { font-family: "Poppins", var(--font-main); font-weight: 700; }
   padding-top: 26px;
 }
 
+/* League table */
+.table-scroll {
+  overflow-x: auto;
+  margin-top: 32px;
+}
+
+.league-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  min-width: 560px;
+}
+
+.league-table th,
+.league-table td {
+  padding: 12px 10px;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.league-table thead th {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+.league-table .team-col {
+  text-align: left;
+  font-weight: 600;
+}
+
+.league-table tr.is-us {
+  background: var(--color-bg-alt);
+}
+
+.league-table tr.is-us .team-col {
+  color: var(--color-primary);
+  font-weight: 800;
+}
+
+.table-note {
+  margin-top: 16px;
+  color: var(--color-text-muted);
+  font-size: 0.82rem;
+  text-align: center;
+}
+
+/* Results list */
+.results-list {
+  max-width: 720px;
+  margin: 32px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.result-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  font-size: 0.9rem;
+}
+
+.result-date {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  min-width: 84px;
+}
+
+.result-teams {
+  flex: 1;
+}
+
+.result-badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.78rem;
+  color: #fff;
+  flex: none;
+}
+
+.result-w { background: #1a8a4a; }
+.result-l { background: var(--color-primary); }
+
+@media (max-width: 600px) {
+  .result-row {
+    flex-wrap: wrap;
+  }
+}
+
 /* Timeline (Tarihçe) */
 .timeline {
   position: relative;
