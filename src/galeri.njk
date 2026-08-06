@@ -1,10 +1,11 @@
 ---
 layout: base.njk
 title: Galeri
-description: "1956 Orta Doğu HSK Instagram gönderileri."
+description: "1956 Orta Doğu HSK sezon fotoğrafları — maçlardan gerçek kareler."
 ---
 <section class="page-hero">
   <div class="container">
+    <p class="eyebrow">Sezon 2025-26</p>
     <h1>Galeri</h1>
   </div>
 </section>
@@ -12,17 +13,39 @@ description: "1956 Orta Doğu HSK Instagram gönderileri."
 <section class="section reveal">
   <div class="container">
     <p class="section-lead">
-      Daha fazlası için <a href="https://www.instagram.com/1956ortadogu/" target="_blank" rel="noopener"><strong>@1956ortadogu</strong></a>'yu takip edin.
+      Sahadan gerçek kareler. Daha fazlası için
+      <a href="https://www.instagram.com/1956ortadogu/" target="_blank" rel="noopener"><strong>@1956ortadogu</strong></a>'yu takip edin.
     </p>
-    <div class="insta-grid">
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DYfRqXMDMgO/" data-instgrm-version="14"></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DYu8MrQOWID/" data-instgrm-version="14"></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DbktZYYu0tT/" data-instgrm-version="14"></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DbQiDWpOzTE/" data-instgrm-version="14"></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DbNp02Cu3QI/" data-instgrm-version="14"></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Da_Riqfjitl/" data-instgrm-version="14"></blockquote>
+    <div class="photo-grid" id="photoGrid">
+      <button class="photo-item" data-full="/images/galeri/v8334.jpg">
+        <img src="/images/galeri/v8334.jpg" alt="Gol kutlaması" loading="lazy">
+      </button>
+      <button class="photo-item" data-full="/images/galeri/d8343.jpg">
+        <img src="/images/galeri/d8343.jpg" alt="Takım sahaya çıkıyor" loading="lazy">
+      </button>
+      <button class="photo-item" data-full="/images/galeri/v8335.jpg">
+        <img src="/images/galeri/v8335.jpg" alt="Gol kutlaması" loading="lazy">
+      </button>
+      <button class="photo-item" data-full="/images/galeri/d8367.jpg">
+        <img src="/images/galeri/d8367.jpg" alt="Maçtan an" loading="lazy">
+      </button>
+      <button class="photo-item" data-full="/images/galeri/v8332.jpg">
+        <img src="/images/galeri/v8332.jpg" alt="Maçtan an" loading="lazy">
+      </button>
+      <button class="photo-item" data-full="/images/galeri/d8363.jpg">
+        <img src="/images/galeri/d8363.jpg" alt="Tribünden taraftarlar" loading="lazy">
+      </button>
+      <button class="photo-item" data-full="/images/galeri/v8331.jpg">
+        <img src="/images/galeri/v8331.jpg" alt="Maçtan an" loading="lazy">
+      </button>
+      <button class="photo-item" data-full="/images/galeri/v8333.jpg">
+        <img src="/images/galeri/v8333.jpg" alt="Maçtan an" loading="lazy">
+      </button>
     </div>
   </div>
 </section>
 
-<script async src="//www.instagram.com/embed.js"></script>
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Kapat">✕</button>
+  <img src="" alt="" id="lightboxImg">
+</div>
