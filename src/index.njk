@@ -44,17 +44,21 @@ description: "1956 Orta Doğu Hocam Spor Kulübü — Futbol, satranç ve flag f
   <div class="container">
     <p class="eyebrow eyebrow-center">Gündem</p>
     <h2 class="section-title">Son Haberler</h2>
-    <div class="card-grid">
-      {% for haber in collections.haberler | limit(3) %}
-      <a class="news-card" href="{{ haber.url }}">
-        {% if haber.data.image %}<img src="{{ haber.data.image }}" alt="" class="news-card-img">{% endif %}
-        <span class="news-tag">{{ haber.data.kategori or "Kulüp" }}</span>
-        <h3>{{ haber.data.title }}</h3>
-        <span class="news-link">{{ haber.date | trDate }} →</span>
-      </a>
-      {% else %}
-      <p class="section-lead">Henüz haber eklenmedi.</p>
-      {% endfor %}
+    <div class="carousel">
+      <button class="carousel-btn carousel-prev" aria-label="Önceki" data-target="newsTrack">‹</button>
+      <div class="carousel-track" id="newsTrack">
+        {% for haber in collections.haberler | limit(8) %}
+        <a class="news-card" href="{{ haber.url }}">
+          {% if haber.data.image %}<img src="{{ haber.data.image }}" alt="" class="news-card-img">{% endif %}
+          <span class="news-tag">{{ haber.data.kategori or "Kulüp" }}</span>
+          <h3>{{ haber.data.title }}</h3>
+          <span class="news-link">{{ haber.date | trDate }} →</span>
+        </a>
+        {% else %}
+        <p class="section-lead">Henüz haber eklenmedi.</p>
+        {% endfor %}
+      </div>
+      <button class="carousel-btn carousel-next" aria-label="Sonraki" data-target="newsTrack">›</button>
     </div>
     <div class="section-cta">
       <a class="btn btn-ghost" href="/haberler/">Tüm Haberleri Gör</a>
@@ -63,6 +67,22 @@ description: "1956 Orta Doğu Hocam Spor Kulübü — Futbol, satranç ve flag f
 </section>
 
 <section class="section">
+  <div class="container">
+    <p class="eyebrow eyebrow-center">Galeri</p>
+    <h2 class="section-title">Öne Çıkanlar</h2>
+    <div class="insta-grid">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DbQiDWpOzTE/" data-instgrm-version="14"></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DbktZYYu0tT/" data-instgrm-version="14"></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DYu8MrQOWID/" data-instgrm-version="14"></blockquote>
+    </div>
+    <div class="section-cta">
+      <a class="btn btn-ghost" href="/galeri/">Tüm Galeriyi Gör</a>
+    </div>
+  </div>
+</section>
+<script async src="//www.instagram.com/embed.js"></script>
+
+<section class="section section-alt">
   <div class="container">
     <p class="eyebrow eyebrow-center">Bünyemizdeki Branşlar</p>
     <h2 class="section-title">Şubeler</h2>
