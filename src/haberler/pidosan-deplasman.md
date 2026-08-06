@@ -7,4 +7,4 @@ excerpt: Lig lideri Pidosan Yahyalarspor deplasmanında 1-0 mağlup olduk.
 ---
 Ankara 2. Amatör Ligi 4. Grup'ta lider Pidosan Yahyalarspor deplasmanında oynadığımız karşılaşmayı 1-0 kaybettik.
 
-Sezonu 14 maçta 12 galibiyet, 2 mağlubiyetle tamamlayan takımımız, bu sonuca rağmen ligi averajla 2. sırada bitirmeyi başardı.
+Pidosan Yahyalarspor, sezonu grubun zirvesinde tamamlayan takım oldu; bu maç da sezon boyunca en güçlü rakibimizle oynadığımız karşılaşmalardan biriydi.

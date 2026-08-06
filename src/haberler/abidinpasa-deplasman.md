@@ -7,4 +7,4 @@ excerpt: Abidinpaşa deplasmanında oynanan yüksek skorlu maçtan 4-3 galip ayr
 ---
 Ankara 2. Amatör Ligi 4. Grup'ta Abidinpaşa deplasmanında oynadığımız karşılaşma golle geçti. Maçı 4-3 kazanarak deplasmandan 3 puanla döndük.
 
-Bu galibiyetle 14 maçlık sezonumuzu 12 galibiyet, 2 mağlubiyetle tamamlayarak ligi averajla 2. sırada bitirdik.
+Grubu 3. sırada tamamlayan Abidinpaşa karşısında alınan bu tek farklı galibiyet, deplasmanda oynadığımız en gergin maçlardan biriydi.

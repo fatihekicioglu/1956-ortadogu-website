@@ -7,4 +7,4 @@ excerpt: Ev sahibi olduğumuz Başkent Şimşekler maçını hükmen 3-0 kazand�
 ---
 Ankara 2. Amatör Ligi 4. Grup'ta ev sahibi olduğumuz Başkent Şimşekler karşılaşmasını hükmen 3-0 kazandık.
 
-Bu galibiyetle sezonu 14 maçta 12 galibiyet, 2 mağlubiyetle tamamlayan takımımız, ligi averajla 2. sırada bitirdi.
+Sezonun son haftalarına girerken alınan bu galibiyet, şampiyonluk yarışındaki konumumuzu korumamıza yardımcı oldu.
