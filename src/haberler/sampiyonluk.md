@@ -4,7 +4,7 @@ title: "İlk Sezonda Şampiyonluk: 1956 Ortadoğu Zirvede"
 date: 2026-05-10
 kategori: Futbol
 excerpt: Takımımız, TFF Ankara 2. Amatör Lig'de mücadele ederek kuruluşunun ilk sezonunda şampiyon oldu.
-image: /images/haberler/sampiyonluk-kutlama.jpg
+image: /images/haberler/sampiyonluk-kutlama.webp
 ---
 Amatör tescil sürecinin henüz tamamlanmamış olması nedeniyle takımımız, ilk sezonunda TFF Ankara 2. Amatör Lig'de mücadele etti ve kuruluşunun ilk sezonunda şampiyon olarak tarihi bir başarıya imza attı.
 

@@ -40,7 +40,7 @@ a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 
 h1, h2 { font-family: var(--font-heading); font-weight: 400; letter-spacing: 0.5px; }
-h3, h4 { font-family: "Poppins", var(--font-main); font-weight: 700; }
+h3, h4 { font-family: "Poppins", var(--font-main); font-weight: 700; font-size: 1.4rem; }
 
 /* Top bar */
 .top-bar {
@@ -342,7 +342,7 @@ h3, h4 { font-family: "Poppins", var(--font-main); font-weight: 700; }
 }
 
 .hero h1 {
-  font-size: clamp(2.4rem, 5.5vw, 4.1rem);
+  font-size: clamp(2.6rem, 6.2vw, 4.5rem);
   margin: 0 0 20px;
   line-height: 1.1;
   letter-spacing: 0.3px;
@@ -391,6 +391,7 @@ h3, h4 { font-family: "Poppins", var(--font-main); font-weight: 700; }
   border-radius: var(--radius);
   font-weight: 700;
   font-size: 0.92rem;
+  line-height: 1;
   transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
 }
 
@@ -480,7 +481,7 @@ h3, h4 { font-family: "Poppins", var(--font-main); font-weight: 700; }
 }
 
 .section-title {
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-size: clamp(1.8rem, 3.6vw, 2.75rem);
   margin: 0 0 16px;
   text-align: center;
   position: relative;
