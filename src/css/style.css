@@ -793,4 +793,14 @@ h1, h2, h3, h4 { font-family: var(--font-main); }
 .haber-body p {
   margin: 0 0 18px;
 }
+
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.insta-grid iframe {
+  margin: 0 auto !important;
 }

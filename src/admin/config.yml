@@ -16,7 +16,7 @@ collections:
     fields:
       - { label: "Başlık", name: "title", widget: "string" }
       - { label: "Tarih", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false }
-      - { label: "Kategori", name: "kategori", widget: "select", options: ["Kulüp", "Futbol", "Satranç", "Flag Futbol"] }
+      - { label: "Kategori", name: "kategori", widget: "select", options: ["Kulüp", "Futbol", "Satranç", "Flag Futbol", "Maç Sonucu", "Aktivite", "Sakatlık Raporu"] }
       - { label: "Özet", name: "excerpt", widget: "text", hint: "Haber listesinde görünecek kısa özet." }
       - { label: "Kapak Görseli", name: "image", widget: "image", required: false }
       - { label: "İçerik", name: "body", widget: "markdown" }
