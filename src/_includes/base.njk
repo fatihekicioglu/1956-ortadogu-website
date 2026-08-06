@@ -5,11 +5,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ title }} · 1956 Orta Doğu HSK</title>
 <meta name="description" content="{{ description or "1956 Orta Doğu Hocam Spor Kulübü — Futbol, satranç ve flag futbol branşlarında mücadele eden, ilk sezonunda TFF Ankara 2. Amatör Lig şampiyonu olan spor kulübü." }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{{ title }} · 1956 Orta Doğu HSK">
+<meta property="og:description" content="{{ description or "1956 Orta Doğu Hocam Spor Kulübü — Futbol, satranç ve flag futbol branşlarında mücadele eden, ilk sezonunda TFF Ankara 2. Amatör Lig şampiyonu olan spor kulübü." }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ site.url }}/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ title }} · 1956 Orta Doğu HSK">
+<meta name="twitter:description" content="{{ description or "1956 Orta Doğu Hocam Spor Kulübü" }}">
+<meta name="twitter:image" content="{{ site.url }}/images/logo.png">
 <link rel="icon" href="/images/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsOrganization",
+  "name": "1956 Orta Doğu Hocam Spor Kulübü",
+  "alternateName": "1956 Orta Doğu HSK",
+  "url": "{{ site.url }}",
+  "logo": "{{ site.url }}/images/logo.png",
+  "foundingDate": "2026-02",
+  "sport": ["Futbol", "Satranç", "Flag Futbol"],
+  "email": "1956ortadogu@gmail.com",
+  "sameAs": [
+    "https://www.instagram.com/1956ortadogu/",
+    "https://www.linkedin.com/company/1956-orta-doğu-hsk/"
+  ]
+}
+</script>
 </head>
 <body>
 

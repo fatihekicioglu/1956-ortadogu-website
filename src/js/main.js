@@ -26,6 +26,30 @@ document.querySelectorAll('.carousel-btn').forEach((button) => {
   });
 });
 
+const siteHeader = document.querySelector('.site-header');
+const onScroll = () => {
+  siteHeader.classList.toggle('scrolled', window.scrollY > 40);
+};
+onScroll();
+window.addEventListener('scroll', onScroll, { passive: true });
+
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+  document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+} else {
+  document.querySelectorAll('.reveal').forEach((el) => el.classList.add('is-visible'));
+}
+
 const filterTabs = document.getElementById('filterTabs');
 if (filterTabs) {
   const newsCards = document.querySelectorAll('#newsGrid .news-card');
