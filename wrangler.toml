@@ -1,5 +1,7 @@
 name = "1956-ortadogu-website"
 compatibility_date = "2025-01-01"
+main = "worker.js"
 
 [assets]
 directory = "./_site"
+binding = "ASSETS"

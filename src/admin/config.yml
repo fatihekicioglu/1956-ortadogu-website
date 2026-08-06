@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: fatihekicioglu/1956-ortadogu-website
   branch: main
+  base_url: https://1956ortadogu.org
 
 media_folder: "src/images/haberler"
 public_folder: "/images/haberler"
