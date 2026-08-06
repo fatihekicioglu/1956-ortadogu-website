@@ -28,3 +28,29 @@ description: "1956 Orta Doğu HSK ile iletişime geçin."
     </div>
   </div>
 </section>
+
+<section class="section section-alt reveal">
+  <div class="container narrow">
+    <p class="eyebrow eyebrow-center">Mesaj Gönder</p>
+    <h2 class="section-title">Bize Yazın</h2>
+    <form name="iletisim" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/tesekkurler/" class="contact-form">
+      <input type="hidden" name="form-name" value="iletisim">
+      <p class="contact-form-hidden">
+        <label>Bu alanı boş bırakın: <input name="bot-field"></label>
+      </p>
+      <div class="form-row">
+        <label for="name">Ad Soyad</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-row">
+        <label for="email">E-posta</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-row">
+        <label for="message">Mesajınız</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-large">Gönder</button>
+    </form>
+  </div>
+</section>

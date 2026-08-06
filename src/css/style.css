@@ -759,6 +759,55 @@ h3, h4 { font-family: "Poppins", var(--font-main); font-weight: 700; }
   gap: 20px;
 }
 
+/* Contact form */
+.contact-form {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form-hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.form-row input,
+.form-row textarea {
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  padding: 12px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--color-text);
+  resize: vertical;
+  transition: border-color 0.15s ease;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.contact-form .btn {
+  align-self: flex-start;
+  border: none;
+}
+
 .contact-item {
   display: flex;
   flex-direction: column;
