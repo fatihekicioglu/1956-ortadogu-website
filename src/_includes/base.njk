@@ -29,8 +29,21 @@
     </a>
     <nav class="main-nav" id="mainNav">
       <a href="/"{% if page.url == "/" %} class="active"{% endif %}>Ana Sayfa</a>
-      <a href="/hakkimizda/"{% if "/hakkimizda/" in page.url %} class="active"{% endif %}>Hakkımızda</a>
-      <a href="/subeler/"{% if "/subeler/" in page.url %} class="active"{% endif %}>Şubeler</a>
+      <div class="nav-dropdown">
+        <a href="/hakkimizda/" class="nav-dropdown-toggle{% if "/hakkimizda/" in page.url or "/tarihce/" in page.url %} active{% endif %}">Kulüp</a>
+        <div class="nav-dropdown-menu">
+          <a href="/hakkimizda/">Hakkımızda</a>
+          <a href="/tarihce/">Tarihçe</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="/subeler/" class="nav-dropdown-toggle{% if "/subeler/" in page.url %} active{% endif %}">Branşlar</a>
+        <div class="nav-dropdown-menu">
+          <a href="/subeler/#futbol">Futbol</a>
+          <a href="/subeler/#satranc">Satranç</a>
+          <a href="/subeler/#flag-futbol">Flag Futbol</a>
+        </div>
+      </div>
       <a href="/haberler/"{% if "/haberler/" in page.url %} class="active"{% endif %}>Haberler</a>
       <a href="/galeri/"{% if "/galeri/" in page.url %} class="active"{% endif %}>Galeri</a>
       <a href="/iletisim/"{% if "/iletisim/" in page.url %} class="active"{% endif %}>İletişim</a>
@@ -55,6 +68,7 @@
     <div class="footer-col">
       <h4>Kulüp</h4>
       <a href="/hakkimizda/">Hakkımızda</a>
+      <a href="/tarihce/">Tarihçe</a>
       <a href="/subeler/">Şubeler</a>
       <a href="/haberler/">Haberler</a>
       <a href="/galeri/">Galeri</a>
