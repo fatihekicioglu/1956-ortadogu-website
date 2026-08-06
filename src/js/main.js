@@ -50,6 +50,33 @@ if ('IntersectionObserver' in window) {
   document.querySelectorAll('.reveal').forEach((el) => el.classList.add('is-visible'));
 }
 
+const counters = document.querySelectorAll('.counter');
+if (counters.length && 'IntersectionObserver' in window) {
+  const animateCounter = (el) => {
+    const target = parseInt(el.dataset.target, 10);
+    const duration = 1200;
+    const start = performance.now();
+    const step = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      el.textContent = Math.round(target * (1 - Math.pow(1 - progress, 3)));
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+  const counterObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+  counters.forEach((el) => counterObserver.observe(el));
+}
+
 const filterTabs = document.getElementById('filterTabs');
 if (filterTabs) {
   const newsCards = document.querySelectorAll('#newsGrid .news-card');

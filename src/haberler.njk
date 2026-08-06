@@ -22,7 +22,7 @@ description: "1956 Orta Doğu HSK'den güncel haberler ve duyurular."
     <div class="card-grid" id="newsGrid">
       {% for haber in collections.haberler %}
       <a class="news-card" href="{{ haber.url }}" data-kategori="{{ haber.data.kategori or "Kulüp" }}">
-        {% if haber.data.image %}<img src="{{ haber.data.image }}" alt="" class="news-card-img">{% endif %}
+        {% if haber.data.image %}<img src="{{ haber.data.image }}" alt="{{ haber.data.title }}" class="news-card-img" loading="lazy">{% endif %}
         <span class="news-tag">{{ haber.data.kategori or "Kulüp" }}</span>
         <h3>{{ haber.data.title }}</h3>
         <p class="news-excerpt">{{ haber.data.excerpt }}</p>

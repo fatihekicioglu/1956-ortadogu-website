@@ -6,7 +6,7 @@ layout: base.njk
     <p class="eyebrow"><a href="/haberler/">← Tüm Haberler</a></p>
     <h1>{{ title }}</h1>
     <p class="haber-meta">{{ date | trDate }}{% if kategori %} · {{ kategori }}{% endif %}</p>
-    {% if image %}<img src="{{ image }}" alt="" class="haber-detail-img">{% endif %}
+    {% if image %}<img src="{{ image }}" alt="{{ title }}" class="haber-detail-img" loading="lazy">{% endif %}
     <div class="haber-body">
       {{ content | safe }}
     </div>

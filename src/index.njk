@@ -7,12 +7,36 @@ description: "1956 Orta Doğu Hocam Spor Kulübü — Futbol, satranç ve flag f
   <div class="hero-stripes" aria-hidden="true"></div>
   <div class="container hero-inner">
     <img src="/images/logo.png" alt="1956 Orta Doğu Spor Kulübü logosu" class="hero-logo">
-    <p class="eyebrow">İlk Sezonda Şampiyon</p>
+    <span class="champion-badge">🏆 İlk Sezonda Şampiyon</span>
+    <p class="eyebrow">Ankara 2. Amatör Ligi</p>
     <h1><span class="accent">1956</span> ORTA DOĞU<br>SPOR KULÜBÜ</h1>
     <p class="hero-sub">Futbol, satranç ve flag futbolda mücadele eden; sahanın dışında güçlü bir dayanışma ağı kuran bir spor kulübü.</p>
     <div class="hero-actions">
       <a class="btn btn-primary btn-large" href="https://docs.google.com/forms/d/e/1FAIpQLScwIlz-WRorQes2rpuac4Enek8_z54BN7Ht3b8NfmVzTAdawQ/viewform" target="_blank" rel="noopener">Kulübe Katıl</a>
       <a class="btn btn-ghost btn-large" href="/haberler/">Haberleri Gör</a>
+    </div>
+  </div>
+</section>
+
+<section class="stat-band reveal">
+  <div class="container">
+    <div class="stat-band-grid">
+      <div class="stat-band-item">
+        <span class="counter" data-target="14">0</span>
+        <span class="stat-band-label">Maç</span>
+      </div>
+      <div class="stat-band-item">
+        <span class="counter" data-target="58">0</span>
+        <span class="stat-band-label">Gol</span>
+      </div>
+      <div class="stat-band-item">
+        <span class="counter" data-target="36">0</span>
+        <span class="stat-band-label">Puan</span>
+      </div>
+      <div class="stat-band-item">
+        <span class="stat-band-static">2.</span>
+        <span class="stat-band-label">Lig Sırası</span>
+      </div>
     </div>
   </div>
 </section>
@@ -69,7 +93,7 @@ description: "1956 Orta Doğu Hocam Spor Kulübü — Futbol, satranç ve flag f
       <div class="carousel-track" id="newsTrack">
         {% for haber in collections.haberler | limit(8) %}
         <a class="news-card" href="{{ haber.url }}">
-          {% if haber.data.image %}<img src="{{ haber.data.image }}" alt="" class="news-card-img">{% endif %}
+          {% if haber.data.image %}<img src="{{ haber.data.image }}" alt="{{ haber.data.title }}" class="news-card-img" loading="lazy">{% endif %}
           <span class="news-tag">{{ haber.data.kategori or "Kulüp" }}</span>
           <h3>{{ haber.data.title }}</h3>
           <span class="news-link">{{ haber.date | trDate }} →</span>
