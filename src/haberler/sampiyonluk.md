@@ -1,6 +1,6 @@
 ---
 layout: haber.njk
-title: "İlk Sezonda Şampiyonluk: 1956 Ortadoğu Zirvede"
+title: "İlk Sezonda Şampiyonluk: 1956 Orta Doğu Zirvede"
 date: 2026-05-10
 kategori: Futbol
 excerpt: Takımımız, TFF Ankara 2. Amatör Lig'de mücadele ederek kuruluşunun ilk sezonunda şampiyon oldu.
