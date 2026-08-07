@@ -102,34 +102,36 @@ description: "1956 Orta Doğu — Ankara 2. Amatör Ligi 4. Grup fikstür, sonu�
   <div class="container">
     <p class="eyebrow eyebrow-center">Sezon 2025-26</p>
     <h2 class="section-title">Maçlar</h2>
-    <div class="carousel">
+    <div class="carousel match-carousel">
       <button class="carousel-btn carousel-prev" aria-label="Önceki" data-target="matchTrack">‹</button>
       <div class="carousel-track" id="matchTrack">
         {% for mac in collections.maclar %}
-        <div class="match-card{% if mac.data.bizim_gol == null or mac.data.rakip_gol == null %} is-upcoming{% endif %}">
-          <div class="match-card-top">
-            <span class="match-date">{{ mac.date | trDate }}{% if mac.data.saat %} · {{ mac.data.saat }}{% endif %}</span>
-            {% if mac.data.bizim_gol != null and mac.data.rakip_gol != null %}
-              {% if mac.data.bizim_gol > mac.data.rakip_gol %}<span class="match-status status-w">G</span>
-              {% elif mac.data.bizim_gol < mac.data.rakip_gol %}<span class="match-status status-l">M</span>
-              {% else %}<span class="match-status status-d">B</span>{% endif %}
-            {% else %}
-              <span class="match-status status-upcoming">Planlanan</span>
-            {% endif %}
-          </div>
-          <div class="match-card-teams">
-            {% if mac.data.konum == "Ev" %}
-              <span class="match-team is-us">1956 Orta Doğu</span>
-              <span class="match-score">{% if mac.data.bizim_gol != null %}{{ mac.data.bizim_gol }}-{{ mac.data.rakip_gol }}{% else %}vs{% endif %}</span>
-              <span class="match-team">{{ mac.data.rakip }}</span>
-            {% else %}
-              <span class="match-team">{{ mac.data.rakip }}</span>
-              <span class="match-score">{% if mac.data.rakip_gol != null %}{{ mac.data.rakip_gol }}-{{ mac.data.bizim_gol }}{% else %}vs{% endif %}</span>
-              <span class="match-team is-us">1956 Orta Doğu</span>
-            {% endif %}
-          </div>
-          <div class="match-card-bottom">
-            <span class="match-location">{{ mac.data.konum }}{% if mac.data.aciklama %} · {{ mac.data.aciklama }}{% endif %}</span>
+        <div class="match-slide">
+          <div class="match-card{% if mac.data.bizim_gol == null or mac.data.rakip_gol == null %} is-upcoming{% endif %}">
+            <div class="match-card-top">
+              <span class="match-date">{{ mac.date | trDate }}{% if mac.data.saat %} · {{ mac.data.saat }}{% endif %}</span>
+              {% if mac.data.bizim_gol != null and mac.data.rakip_gol != null %}
+                {% if mac.data.bizim_gol > mac.data.rakip_gol %}<span class="match-status status-w">G</span>
+                {% elif mac.data.bizim_gol < mac.data.rakip_gol %}<span class="match-status status-l">M</span>
+                {% else %}<span class="match-status status-d">B</span>{% endif %}
+              {% else %}
+                <span class="match-status status-upcoming">Planlanan</span>
+              {% endif %}
+            </div>
+            <div class="match-card-teams">
+              {% if mac.data.konum == "Ev" %}
+                <span class="match-team is-us">1956 Orta Doğu</span>
+                <span class="match-score">{% if mac.data.bizim_gol != null %}{{ mac.data.bizim_gol }}-{{ mac.data.rakip_gol }}{% else %}vs{% endif %}</span>
+                <span class="match-team">{{ mac.data.rakip }}</span>
+              {% else %}
+                <span class="match-team">{{ mac.data.rakip }}</span>
+                <span class="match-score">{% if mac.data.rakip_gol != null %}{{ mac.data.rakip_gol }}-{{ mac.data.bizim_gol }}{% else %}vs{% endif %}</span>
+                <span class="match-team is-us">1956 Orta Doğu</span>
+              {% endif %}
+            </div>
+            <div class="match-card-bottom">
+              <span class="match-location">{{ mac.data.konum }}{% if mac.data.aciklama %} · {{ mac.data.aciklama }}{% endif %}</span>
+            </div>
           </div>
         </div>
         {% endfor %}
