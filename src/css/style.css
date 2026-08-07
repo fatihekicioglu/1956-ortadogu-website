@@ -1311,6 +1311,10 @@ h3, h4 { font-family: "Poppins", var(--font-main); font-weight: 700; font-size: 
   box-shadow: 0 2px 10px rgba(20, 16, 16, 0.06);
 }
 
+.match-carousel .carousel-track {
+  max-width: 1026px;
+}
+
 .match-carousel .carousel-track > .match-card {
   flex: 0 0 240px;
   scroll-snap-align: start;
