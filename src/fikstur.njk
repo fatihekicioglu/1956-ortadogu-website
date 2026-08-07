@@ -77,57 +77,65 @@ description: "1956 Orta Doğu — Ankara 2. Amatör Ligi 4. Grup fikstür, sonu�
   </div>
 </section>
 
+{% set upcomingMatches = collections.maclar | planlanan %}
+{% if upcomingMatches.length > 0 %}
+<section class="section reveal">
+  <div class="container">
+    <p class="eyebrow eyebrow-center">Sıradaki Maç</p>
+    <h2 class="section-title">{{ upcomingMatches[0].data.rakip }}</h2>
+    <div class="next-match-card">
+      <span class="next-match-date">{{ upcomingMatches[0].date | trDate }}{% if upcomingMatches[0].data.saat %} · {{ upcomingMatches[0].data.saat }}{% endif %}</span>
+      <div class="next-match-teams">
+        {% if upcomingMatches[0].data.konum == "Ev" %}
+          <span>1956 Orta Doğu</span><span class="vs">VS</span><span>{{ upcomingMatches[0].data.rakip }}</span>
+        {% else %}
+          <span>{{ upcomingMatches[0].data.rakip }}</span><span class="vs">VS</span><span>1956 Orta Doğu</span>
+        {% endif %}
+      </div>
+      <span class="next-match-comp">{{ upcomingMatches[0].data.yarisma }} · {{ upcomingMatches[0].data.konum }}</span>
+    </div>
+  </div>
+</section>
+{% endif %}
+
 <section class="section section-alt reveal">
   <div class="container">
     <p class="eyebrow eyebrow-center">Sezon 2025-26</p>
-    <h2 class="section-title">Son Sonuçlar</h2>
-    <div class="results-list">
-      <div class="result-row">
-        <span class="result-date">13.06.2026</span>
-        <span class="result-teams">Ankara Metropolspor <strong>2-4</strong> 1956 Orta Doğu</span>
-        <span class="result-badge result-w">G</span>
+    <h2 class="section-title">Maçlar</h2>
+    <div class="carousel">
+      <button class="carousel-btn carousel-prev" aria-label="Önceki" data-target="matchTrack">‹</button>
+      <div class="carousel-track" id="matchTrack">
+        {% for mac in collections.maclar %}
+        <div class="match-card{% if mac.data.bizim_gol == null or mac.data.rakip_gol == null %} is-upcoming{% endif %}">
+          <div class="match-card-top">
+            <span class="match-date">{{ mac.date | trDate }}{% if mac.data.saat %} · {{ mac.data.saat }}{% endif %}</span>
+            {% if mac.data.bizim_gol != null and mac.data.rakip_gol != null %}
+              {% if mac.data.bizim_gol > mac.data.rakip_gol %}<span class="match-status status-w">G</span>
+              {% elif mac.data.bizim_gol < mac.data.rakip_gol %}<span class="match-status status-l">M</span>
+              {% else %}<span class="match-status status-d">B</span>{% endif %}
+            {% else %}
+              <span class="match-status status-upcoming">Planlanan</span>
+            {% endif %}
+          </div>
+          <div class="match-card-teams">
+            {% if mac.data.konum == "Ev" %}
+              <span class="match-team is-us">1956 Orta Doğu</span>
+              <span class="match-score">{% if mac.data.bizim_gol != null %}{{ mac.data.bizim_gol }}-{{ mac.data.rakip_gol }}{% else %}vs{% endif %}</span>
+              <span class="match-team">{{ mac.data.rakip }}</span>
+            {% else %}
+              <span class="match-team">{{ mac.data.rakip }}</span>
+              <span class="match-score">{% if mac.data.rakip_gol != null %}{{ mac.data.rakip_gol }}-{{ mac.data.bizim_gol }}{% else %}vs{% endif %}</span>
+              <span class="match-team is-us">1956 Orta Doğu</span>
+            {% endif %}
+          </div>
+          <div class="match-card-bottom">
+            <span class="match-location">{{ mac.data.konum }}{% if mac.data.aciklama %} · {{ mac.data.aciklama }}{% endif %}</span>
+          </div>
+        </div>
+        {% endfor %}
       </div>
-      <div class="result-row">
-        <span class="result-date">08.06.2026</span>
-        <span class="result-teams">1956 Orta Doğu <strong>3-0</strong> Başkent Şimşekler <em>(Hükmen)</em></span>
-        <span class="result-badge result-w">G</span>
-      </div>
-      <div class="result-row">
-        <span class="result-date">03.06.2026</span>
-        <span class="result-teams">1956 Orta Doğu <strong>6-2</strong> Sincan Gençlerspor</span>
-        <span class="result-badge result-w">G</span>
-      </div>
-      <div class="result-row">
-        <span class="result-date">24.05.2026</span>
-        <span class="result-teams">Abidinpaşa <strong>3-4</strong> 1956 Orta Doğu</span>
-        <span class="result-badge result-w">G</span>
-      </div>
-      <div class="result-row">
-        <span class="result-date">19.05.2026</span>
-        <span class="result-teams">1956 Orta Doğu <strong>9-1</strong> Dikmenspor</span>
-        <span class="result-badge result-w">G</span>
-      </div>
-      <div class="result-row">
-        <span class="result-date">17.05.2026</span>
-        <span class="result-teams">Pidosan Yahyalarspor <strong>1-0</strong> 1956 Orta Doğu</span>
-        <span class="result-badge result-l">M</span>
-      </div>
-      <div class="result-row">
-        <span class="result-date">13.05.2026</span>
-        <span class="result-teams">1956 Orta Doğu <strong>3-0</strong> Mamakspor</span>
-        <span class="result-badge result-w">G</span>
-      </div>
-      <div class="result-row">
-        <span class="result-date">10.05.2026</span>
-        <span class="result-teams">1956 Orta Doğu <strong>8-1</strong> Ankara Metropolspor</span>
-        <span class="result-badge result-w">G</span>
-      </div>
-      <div class="result-row">
-        <span class="result-date">02.05.2026</span>
-        <span class="result-teams">Başkent Şimşekler <strong>1-2</strong> 1956 Orta Doğu</span>
-        <span class="result-badge result-w">G</span>
-      </div>
+      <button class="carousel-btn carousel-next" aria-label="Sonraki" data-target="matchTrack">›</button>
     </div>
-    <p class="table-note">Kaynak: Sofascore, Ankara 2. Amatör Ligi 4. Grup</p>
+    <p class="table-note">Kaynak: Sofascore, Ankara 2. Amatör Ligi 4. Grup · Yeni maçlar yönetim panelinden eklenir</p>
   </div>
 </section>

@@ -23,3 +23,22 @@ collections:
       - { label: "Kapak Görseli", name: "image", widget: "image", required: false }
       - { label: "İçerik", name: "body", widget: "markdown" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "haber.njk" }
+
+  - name: "maclar"
+    label: "Maçlar"
+    label_singular: "Maç"
+    folder: "src/maclar"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{fields.rakip}}"
+    identifier_field: rakip
+    summary: "{{date}} · {{fields.rakip}} ({{fields.konum}})"
+    fields:
+      - { label: "Tarih", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false }
+      - { label: "Rakip Takım", name: "rakip", widget: "string" }
+      - { label: "Konum", name: "konum", widget: "select", options: ["Ev", "Deplasman"] }
+      - { label: "Yarışma", name: "yarisma", widget: "string", default: "Ankara 2. Amatör Ligi" }
+      - { label: "Saat", name: "saat", widget: "string", required: false, hint: "Örn: 19:00 — maç henüz oynanmadıysa doldur" }
+      - { label: "Bizim Golümüz", name: "bizim_gol", widget: "number", required: false, hint: "Maç henüz oynanmadıysa boş bırak" }
+      - { label: "Rakip Golü", name: "rakip_gol", widget: "number", required: false, hint: "Maç henüz oynanmadıysa boş bırak" }
+      - { label: "Açıklama", name: "aciklama", widget: "string", required: false, hint: "Örn: Hükmen" }
+      - { label: "Permalink", name: "permalink", widget: "hidden", default: false }
