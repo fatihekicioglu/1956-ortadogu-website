@@ -1621,3 +1621,79 @@ h3, h4 { font-family: "Poppins", var(--font-main); font-weight: 700; font-size: 
 .lightbox-close:hover {
   background: rgba(255, 255, 255, 0.2);
 }
+
+/* Oyuncu seçme formu pop-up'ı */
+.tryout-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  background: rgba(9, 7, 7, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.tryout-modal.is-open {
+  display: flex;
+}
+
+.tryout-modal-box {
+  background: #fff;
+  border-radius: var(--radius);
+  width: 100%;
+  max-width: 640px;
+  height: 88vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5);
+}
+
+.tryout-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: var(--color-primary);
+  color: #fff;
+  font-family: var(--font-heading);
+  letter-spacing: 0.5px;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.tryout-modal-close {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.tryout-modal-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.tryout-modal-box iframe {
+  flex: 1;
+  border: none;
+  width: 100%;
+}
+
+.nav-cta {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+@media (max-width: 900px) {
+  .nav-cta {
+    align-self: flex-start;
+  }
+}
