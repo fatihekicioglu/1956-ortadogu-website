@@ -106,7 +106,7 @@
       <a href="/fikstur/"{% if "/fikstur/" in page.url %} class="active"{% endif %}>Fikstür</a>
       <a href="/galeri/"{% if "/galeri/" in page.url %} class="active"{% endif %}>Galeri</a>
       <a href="/iletisim/"{% if "/iletisim/" in page.url %} class="active"{% endif %}>İletişim</a>
-      <button type="button" class="btn btn-primary btn-pill nav-cta" id="tryoutNavBtn">Oyuncu Ol</button>
+      <button type="button" class="btn btn-primary btn-pill nav-cta" id="tryoutNavBtn">Oyuncu Seçme Formu</button>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
       <span></span><span></span><span></span>
