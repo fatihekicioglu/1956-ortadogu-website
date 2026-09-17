@@ -1,5 +1,29 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
+const tryoutModal = document.getElementById('tryoutModal');
+if (tryoutModal) {
+  const openTryoutModal = () => {
+    tryoutModal.classList.add('is-open');
+    tryoutModal.setAttribute('aria-hidden', 'false');
+  };
+  const closeTryoutModal = () => {
+    tryoutModal.classList.remove('is-open');
+    tryoutModal.setAttribute('aria-hidden', 'true');
+  };
+
+  // Her sayfa yüklendiğinde otomatik aç.
+  openTryoutModal();
+
+  document.getElementById('tryoutModalClose').addEventListener('click', closeTryoutModal);
+  document.getElementById('tryoutNavBtn')?.addEventListener('click', openTryoutModal);
+  tryoutModal.addEventListener('click', (e) => {
+    if (e.target === tryoutModal) closeTryoutModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeTryoutModal();
+  });
+}
+
 const navToggle = document.getElementById('navToggle');
 const mainNav = document.getElementById('mainNav');
 
@@ -8,7 +32,7 @@ navToggle.addEventListener('click', () => {
   navToggle.setAttribute('aria-expanded', String(isOpen));
 });
 
-mainNav.querySelectorAll('a').forEach((link) => {
+mainNav.querySelectorAll('a, .nav-cta').forEach((link) => {
   link.addEventListener('click', () => {
     mainNav.classList.remove('open');
     navToggle.setAttribute('aria-expanded', 'false');
