@@ -48,6 +48,16 @@
 </head>
 <body>
 
+<div class="tryout-modal" id="tryoutModal" aria-hidden="true">
+  <div class="tryout-modal-box">
+    <div class="tryout-modal-header">
+      <span>Oyuncu Seçme Formu</span>
+      <button class="tryout-modal-close" id="tryoutModalClose" aria-label="Kapat">&times;</button>
+    </div>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSca2xUcIS_C5v7bO3o2M11Yl0ztL8zV89mau17h3C4-ph3zAw/viewform?embedded=true" title="Oyuncu Seçme Formu">Form yükleniyor…</iframe>
+  </div>
+</div>
+
 <div class="top-bar">
   <div class="container top-bar-inner">
     <div class="top-bar-social">
@@ -96,6 +106,7 @@
       <a href="/fikstur/"{% if "/fikstur/" in page.url %} class="active"{% endif %}>Fikstür</a>
       <a href="/galeri/"{% if "/galeri/" in page.url %} class="active"{% endif %}>Galeri</a>
       <a href="/iletisim/"{% if "/iletisim/" in page.url %} class="active"{% endif %}>İletişim</a>
+      <button type="button" class="btn btn-primary btn-pill nav-cta" id="tryoutNavBtn">Oyuncu Ol</button>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
       <span></span><span></span><span></span>
